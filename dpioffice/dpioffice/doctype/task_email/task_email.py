@@ -40,9 +40,11 @@ class TaskEmail(Document):
 		frappe.msgprint(message)
 		# report_doctype = frappe.db.get_value('Report', self.report, 'ref_doctype')
 		# report_footer = frappe.render_template(self.get_report_footer(),dict(report_url = frappe.utils.get_url_to_report("DPI Task Report", "Script Report", "Task"),report_name = "DPI Task Report"))
-
+		rec = self.cc.split(",")
+		rec.insert(0,single_email_id)
+		rec = ",".join(rec)
 		frappe.sendmail(
-			recipients = single_email_id,
+			recipients = rec,
 			subject = self.subject,
 			message = message,
 			attachments = None
