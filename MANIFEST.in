@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include dpioffice *.css
+recursive-include dpioffice *.csv
+recursive-include dpioffice *.html
+recursive-include dpioffice *.ico
+recursive-include dpioffice *.js
+recursive-include dpioffice *.json
+recursive-include dpioffice *.md
+recursive-include dpioffice *.png
+recursive-include dpioffice *.py
+recursive-include dpioffice *.svg
+recursive-include dpioffice *.txt
+recursive-exclude dpioffice *.pyc
