@@ -91,6 +91,12 @@ hide_in_installer = True
 # Scheduled Tasks
 # ---------------
 
+scheduler_events = {
+	"daily": [
+		"dpioffice.dpioffice.doctype.task_email.task_email.send_now"
+	],
+}
+
 # scheduler_events = {
 # 	"all": [
 # 		"dpioffice.tasks.all"

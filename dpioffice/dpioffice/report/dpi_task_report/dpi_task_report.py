@@ -8,11 +8,12 @@ def execute(filters=None):
     columns = get_colums()
     validate_filters(filters)
     data = get_data(filters)
-
+    print "\n\n\n\nasdas",filters
+    print data
     return columns, data
 
 def validate_filters(filters):
-	if filters.from_date > filters.to_date:
+	if filters.get("from_date") > filters.get("to_date"):
 		frappe.throw(_("From Date must be before To Date"))
 
 def get_colums():
