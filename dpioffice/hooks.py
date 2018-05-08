@@ -12,6 +12,14 @@ app_email = "contact@digitalprizm.net"
 app_license = "MIT"
 hide_in_installer = True
 
+
+
+doc_events = {
+	"Task": {
+		"autoname": "dpioffice.custom_methods.set_task_autoname"
+	},
+}
+
 # Includes in <head>
 # ------------------
 
